@@ -5,6 +5,6 @@ namespace AddingSitesToBlackList
 {
     public class AddingSitesToBlackList
     {
-
+         
     }
 }
