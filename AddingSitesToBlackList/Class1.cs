@@ -14,11 +14,6 @@ namespace AddingSitesToBlackList
         public List<Sites> Sites { get; set; }
 
         /// <summary>
-        /// Статус сайта
-        /// </summary>
-        public Status Status { get; set; }
-
-        /// <summary>
         /// Дата блокировки
         /// </summary>
         public DateTime BlockDate { get; set; }
@@ -87,5 +82,10 @@ namespace AddingSitesToBlackList
         /// Скриншот прилагаемый
         /// </summary>
         public byte[] Screenshot { get; set; }
+
+        /// <summary>
+        /// Статус сайта
+        /// </summary>
+        public Status Status { get; set; }
     }
 }
