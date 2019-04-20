@@ -6,17 +6,12 @@ namespace AddingSitesToBlackList
     /// <summary>
     /// Добавление сайтов в черный список Единого Реестра
     /// </summary>
-    public class AddingSitesToBlackList
+    public class AddingSitesToBlackListClass
     {
         /// <summary>
         /// Список сайтов
         /// </summary>
-        public List<Sites> Sites { get; set; }
-
-        /// <summary>
-        /// Дата блокировки
-        /// </summary>
-        public DateTime BlockDate { get; set; }
+        public List<Sites> SitesList { get; set; }
     }
 
     /// <summary>
@@ -56,7 +51,7 @@ namespace AddingSitesToBlackList
         public string AdressPubl { get; set; }
 
         /// <summary>
-        /// Причина
+        /// Комментарий
         /// </summary>
         public string Reason { get; set; }
 
@@ -67,6 +62,11 @@ namespace AddingSitesToBlackList
         {
             "Экстремизм", "Угрозы к свержению власти", "Нарушение авторских прав", "Нарушение тайны частной жизни", "Раскрытие гостайны"
         };
+
+        /// <summary>
+        /// Причина
+        /// </summary>
+        public string Violation { get; set; }
         
         /// <summary>
         /// Дата отправки 
@@ -87,5 +87,20 @@ namespace AddingSitesToBlackList
         /// Статус сайта
         /// </summary>
         public Status Status { get; set; }
+
+        /// <summary>
+        /// Статус строкой
+        /// </summary>
+        public string Stat { get; set; }
+
+        /// <summary>
+        /// Дата блокировки
+        /// </summary>
+        public DateTime BlockDate { get; set; }
+
+        public override string ToString()
+        {
+            return $"Адрес: {Adress}, Адрес публикации: {AdressPubl}, Причина: {Violation}, Комментарий: {Reason}, СТАТУС: {Stat}, Дата блокировки: {BlockDate}";
+        }
     }
 }
